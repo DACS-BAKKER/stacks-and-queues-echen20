@@ -1,8 +1,9 @@
-public class Node <Item>{
-    private Item data;
-    private Node<Item> next;
+public class Node {
+   // private Item data;
+    public int data;
+    public Node next;
 
-    public Node(Item data) {
+    public Node(int data) {
         this.data = data;
     }
 
@@ -10,20 +11,8 @@ public class Node <Item>{
 
     }
 
-    public Item getData() {
-        return data;
-    }
-
     public void setNext(Node n) {
         next = n;
-    }
-
-    public Node nextNode() {
-        return next;
-    }
-
-    public void delete() {
-        this.data = null;
     }
 
     @Override

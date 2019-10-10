@@ -11,8 +11,8 @@ public class LinkedList {
     public void addItem(int item) {
         Node currentNode = origin;
         Node newNode = new Node(item);
-        while(currentNode.nextNode() != null) {
-            currentNode = currentNode.nextNode();
+        while(currentNode.next != null) {
+            currentNode = currentNode.next;
         }
         currentNode.setNext(newNode);
     }
@@ -20,11 +20,11 @@ public class LinkedList {
     public int getItemPosition(int item) {
         Node currentNode = origin;
         int counter = 0;
-        while(!currentNode.getData().equals(item)) {
-            if(currentNode.nextNode() == null) {
+        while(currentNode.data != item) {
+            if(currentNode.next == null) {
                 return -1;
             }
-            currentNode = currentNode.nextNode();
+            currentNode = currentNode.next;
             counter ++;
         }
         return counter;
@@ -36,14 +36,14 @@ public class LinkedList {
         Node newNode = new Node(item);
 
         while(counter != place-1) {
-            if(currentNode.nextNode() == null) {
+            if(currentNode.next == null) {
                 return;
             }
-            currentNode = currentNode.nextNode();
+            currentNode = currentNode.next;
             counter ++;
         }
 
-        Node tempNode = currentNode.nextNode();
+        Node tempNode = currentNode.next;
         currentNode.setNext(newNode);
         newNode.setNext(tempNode);
 
@@ -54,22 +54,22 @@ public class LinkedList {
         int counter = 0;
 
         while(counter != place-1) {
-            if(currentNode.nextNode() == null) {
+            if(currentNode.next == null) {
                 return;
             }
-            currentNode = currentNode.nextNode();
+            currentNode = currentNode.next;
             counter ++;
         }
 
-        currentNode.setNext(currentNode.nextNode().nextNode());
+        currentNode.setNext(currentNode.next.next);
 
     }
 
     public void printList() {
         Node currentNode = origin;
 
-        while(!currentNode.nextNode().equals(null)) {
-            StdOut.println(currentNode.getData());
+        while(!currentNode.next.equals(null)) {
+            StdOut.println(currentNode.data);
         }
 
     }
