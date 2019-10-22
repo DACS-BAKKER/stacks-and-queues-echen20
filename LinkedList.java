@@ -12,6 +12,10 @@ public class LinkedList {
     the reverse linked list problems as part of the problem set. In terms of the reverse linked list, the only
     necessary methods are addItem (in order to create the linked list) and printList (to print it at the end), but the
     others are also included as well.
+
+    All methods (except for addItem) use ints as the objects because I did not use generics in this file and wanted
+    to just simulate the methods. To use these other methods, it would make more sense to use a generic <Item>, such
+    as is implemented in stack and queue.
      */
 
     Node origin;
@@ -24,7 +28,8 @@ public class LinkedList {
         origin = firstNode;
     }
 
-    public void addItem(Node node) {
+    public void addItem(Node node) { // Originally took an int in order to simplify it, but changed it to a node
+                                     // for the sake of using the reversed linked list tester
         //Node newNode = new Node(item);
         if (origin != null) {
             Node currentNode = origin;
