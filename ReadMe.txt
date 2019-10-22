@@ -1,6 +1,6 @@
 Name: Ethan Chen
 Date: October 21, 2019
-Project: Stacks and Queues API
+Project: Stacks and Queues API and Problem Set
 
 FILE AND PROBLEM DESCRIPTIONS:
 

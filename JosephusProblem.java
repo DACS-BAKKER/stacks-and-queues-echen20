@@ -1,6 +1,7 @@
 /*  Josephus Problem
     Name: Ethan Chen
     Date Started: October 11, 2019
+
 */
 
 import edu.princeton.cs.algs4.StdIn;
