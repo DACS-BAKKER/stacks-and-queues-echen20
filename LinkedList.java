@@ -24,16 +24,16 @@ public class LinkedList {
         origin = firstNode;
     }
 
-    public void addItem(int item) {
-        Node newNode = new Node(item);
+    public void addItem(Node node) {
+        //Node newNode = new Node(item);
         if (origin != null) {
             Node currentNode = origin;
             while (currentNode.next != null) {
                 currentNode = currentNode.next;
             }
-            currentNode.setNext(newNode);
+            currentNode.setNext(node);
         } else {
-            origin = newNode;
+            origin = node;
         }
     }
 
