@@ -1,14 +1,16 @@
-public class Node {
-   // private Item data;
-    public int data;
+/*  Node Class
+    Name: Ethan Chen
+    Date Started: October 10, 2019
+*/
+
+// Class contains a value and a pointer to another node. This is necessary for Linked List data structures
+
+public class Node<Item> {
+    public Item data;
     public Node next;
 
-    public Node(int data) {
+    public Node(Item data) {
         this.data = data;
-    }
-
-    public Node() {
-
     }
 
     public void setNext(Node n) {
